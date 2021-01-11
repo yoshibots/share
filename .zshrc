@@ -36,24 +36,19 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-#pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-#zplug
+# zplug
 source ~/.zplug/init.zsh
 
-#構文のハイライト
+# 構文のハイライト
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
-#補完強化
+# 補完強化
 zplug "zsh-users/zsh-completions"
 
-#256色表示にする
+# 256色表示にする
 zplug "chrissicool/zsh-256color"
 
-#インストールされていなければインストールする
+# インストールされていなければインストールする
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
   if read -q; then
@@ -66,8 +61,12 @@ zplug load
 
 export SHELL=/usr/bin/zsh
 
-#環境変数EDITORにviを設定
+# 環境変数EDITORにviを設定
 export EDITOR=vi
 
-#alias
-alias tsc="/home/yoshi/Desktop/working/sh/tscreen.sh"
+# Alias
+alias tsc='/home/yoshi/Desktop/working/sh/tscreen.sh'
+alias ls='ls --color=auto'
+
+# Direnv
+eval "$(direnv hook zsh)"
