@@ -14,9 +14,16 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
-# Use modern completion system
+# locale
+export LC_ALL=en_US.UTF-8 # Priority:top
+export LANG=en_US.UTF-8
+
+# Use modern completion systeCm
 autoload -Uz compinit
 compinit
+
+# XDG BASE DIRECTORY
+export XDG_CONFIG_HOME=~/.config
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
@@ -67,6 +74,7 @@ export EDITOR=vi
 # Alias
 alias tsc='/home/yoshi/Desktop/working/sh/tscreen.sh'
 alias ls='ls --color=auto'
+alias vi=vim
 
 # Direnv
 eval "$(direnv hook zsh)"

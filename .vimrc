@@ -15,7 +15,6 @@ if dein#load_state('/home/yoshi/.vim/dein/.')
   call dein#add('/home/yoshi/.vim/dein/./repos/github.com/Shougo/dein.vim')
  
 
-
   " Add or remove your plugins here like this:
   "call dein#add('Shougo/neosnippet.vim')
   "call dein#add('Shougo/neosnippet-snippets')
@@ -101,6 +100,26 @@ set t_Co=256
 set laststatus=2
 
 "### Emmet-vim
+
+"vim-airline
+"Show Tab Namber
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+"
+let g:airline#extensions#tabline#enabled = 1
+"
+nmap <C-p> <Plug>AirlineSelectPrevTab
+nmap <C-n> <Plug>AirlineSelectNextTab
+
+"NERDTree
+nnoremap <C-t> :NERDTreeToggle<CR>
+"Show hidden files
+"let NERDTreeShowHidden = 1
+
+"
+"Edit $MYVIMRC <Space>.
+nnoremap <Space>. :<C-u>edit $MYVIMRC<CR>
+"Source $MYVIMRC <Space>s.
+nnoremap <Space>s. :<C-u>source $MYVIMRC<CR>
 
 "Leader
 let mapleader = "\<Space>"

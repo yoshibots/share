@@ -1,0 +1,8 @@
+[[plugins]]
+repo = 'davidhalter/jedi-vim'
+on_ft = ['python']
+
+[[plugins]]
+repo = 'puremourning/vimspector'
+on_ft = ['python']
+
