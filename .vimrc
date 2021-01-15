@@ -14,12 +14,10 @@ if dein#load_state('/home/yoshi/.vim/dein/.')
   " Required:
   call dein#add('/home/yoshi/.vim/dein/./repos/github.com/Shougo/dein.vim')
  
-
   " Add or remove your plugins here like this:
   "call dein#add('Shougo/neosnippet.vim')
-  "call dein#add('Shougo/neosnippet-snippets')
-  
-" Load TOML 
+
+  " Load TOML 
    let s:toml_dir  = $HOME . '/.vim/dein/plugins' 
    let s:toml      = s:toml_dir . '/dein.toml'
    let s:lazy_toml = s:toml_dir . '/dein_lazy.toml'
@@ -67,6 +65,11 @@ set title
 syntax on 
 set smartindent
 
+"Status Line
+set laststatus=2
+
+"検索候補をステータスバーに表示
+set wildmenu
 ""appearance------------------------------
 
 "行番号を表示
@@ -92,25 +95,64 @@ set ignorecase
 "検索後をハイライト表示
 set hlsearch
 
-"colorschema molokai---------------------
+""PLUGIN SETTINGS++++++++++++++++++++++++
+
+""tomasr/molokai
+"colorschema
 colorscheme molokai
 set t_Co=256
 
-"### lightline
-set laststatus=2
+""Emmet-vim
 
-"### Emmet-vim
+""vim-airline
+"Thema
+let g:airline_theme = 'wombat'
+"Use Powerline Fonts *Need install powerline fonts
+let g:airline_powerline_fonts = 1
 
-"vim-airline
 "Show Tab Namber
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 "
 let g:airline#extensions#tabline#enabled = 1
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.crypt = '🔒'
+let g:airline_symbols.linenr = '☰'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.maxlinenr = '㏑'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.spell = 'Ꞩ'
+let g:airline_symbols.notexists = 'Ɇ'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" powerline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = '☰'
+let g:airline_symbols.maxlinenr = ''
 "
 nmap <C-p> <Plug>AirlineSelectPrevTab
 nmap <C-n> <Plug>AirlineSelectNextTab
 
-"NERDTree
+""NERDTree
 nnoremap <C-t> :NERDTreeToggle<CR>
 "Show hidden files
 "let NERDTreeShowHidden = 1

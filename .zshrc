@@ -4,14 +4,26 @@ autoload -Uz promptinit
 promptinit
 prompt adam1
 
-setopt histignorealldups sharehistory
+export SHELL=/usr/bin/zsh
+
+# 環境変数EDITORにvimを設定
+export EDITOR=vim
+
+# COMMAND HISTORY ++++++++++++++++++++++++++++++++++++++++++++++++
+
+setopt SHARE_HISTORY # 履歴を共有する
+setopt HIST_IGNORE_ALL_DUPS # 履歴中の重複行をファイルに記録しない
+setopt HIST_IGNORE_DUPS  # 前と重複する行は記録しない
+setopt HIST_IGNORE_SPACE # 行頭がスペースのコマンドは記録しない
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ END
 
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
 # locale
@@ -43,7 +55,9 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-# zplug
+# zplug ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+#
 source ~/.zplug/init.zsh
 
 # 構文のハイライト
@@ -63,18 +77,18 @@ if ! zplug check --verbose; then
   fi
 fi
 
-#
 zplug load
 
-export SHELL=/usr/bin/zsh
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ END
 
-# 環境変数EDITORにviを設定
-export EDITOR=vi
-
-# Alias
+# Alias ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
 alias tsc='/home/yoshi/Desktop/working/sh/tscreen.sh'
 alias ls='ls --color=auto'
 alias vi=vim
 
-# Direnv
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ END
+
+# Direnv ++++++++++++++++++
 eval "$(direnv hook zsh)"
+# +++++++++++++++++++++ END
