@@ -157,6 +157,10 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 "Show hidden files
 "let NERDTreeShowHidden = 1
 
+""NERDCommenter
+"コメントアウトの記号を左に寄せる
+let g:NERDDefaultAlign = 'left'
+
 "
 "Edit $MYVIMRC <Space>.
 nnoremap <Space>. :<C-u>edit $MYVIMRC<CR>
