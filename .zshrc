@@ -89,10 +89,11 @@ zplug load
 
 # Alias ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #
-alias tsc='/home/yoshi/Desktop/working/sh/tscreen.sh'
 alias ls='ls --color=auto'
 alias vi=vim
 
+alias update='/home/yoshi/Code/sh/flush.sh'
+alias tscreen='/home/yoshi/Code/sh/tscreen.sh'
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ END
 
 # Direnv ++++++++++++++++++
