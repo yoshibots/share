@@ -18,7 +18,7 @@ if dein#load_state('/home/yoshi/.vim/dein/.')
   "call dein#add('Shougo/neosnippet.vim')
 
   " Load TOML 
-   let s:toml_dir  = $HOME . '/.vim/dein/plugins' 
+   let s:toml_dir  = $HOME . '/.vim' 
    let s:toml      = s:toml_dir . '/dein.toml'
    let s:lazy_toml = s:toml_dir . '/dein_lazy.toml'
   
@@ -96,6 +96,11 @@ set ignorecase
 set hlsearch
 
 ""PLUGIN SETTINGS++++++++++++++++++++++++
+
+"":call dein#check_update(v:true)
+"dein
+""let g:dein#install_github_api_token = 'github_api_token'
+
 
 ""tomasr/molokai
 "colorschema

@@ -60,6 +60,9 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 #
 source ~/.zplug/init.zsh
 
+# 非同期処理できるようになる
+zplug "mafredri/zsh-async"
+
 # 構文のハイライト
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
@@ -68,6 +71,9 @@ zplug "zsh-users/zsh-completions"
 
 # 256色表示にする
 zplug "chrissicool/zsh-256color"
+
+# Theme
+# zplug "sindresorhus/pure"
 
 # インストールされていなければインストールする
 if ! zplug check --verbose; then
