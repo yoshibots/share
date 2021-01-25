@@ -99,7 +99,7 @@ set hlsearch
 
 "":call dein#check_update(v:true)
 "dein
-""let g:dein#install_github_api_token = 'github_api_token'
+let g:dein#install_github_api_token = '/home/yoshi/token/github_api_token'
 
 
 ""tomasr/molokai

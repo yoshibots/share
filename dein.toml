@@ -18,8 +18,6 @@ repo = 'preservim/nerdtree'
 repo = 'preservim/nerdcommenter'
 
 [[plugins]]
-repo = 'preservim/nerdcommenter'
-[[plugins]]
 repo = 'mattn/emmet-vim'
 
 [[plugins]]
