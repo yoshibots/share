@@ -27,8 +27,8 @@ SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
 # locale
-export LC_ALL=en_US.UTF-8 # Priority:top
-export LANG=en_US.UTF-8
+#export LC_ALL=en_US.UTF-8 # Priority:top
+#export LANG=en_US.UTF-8
 
 # Use modern completion systeCm
 autoload -Uz compinit
@@ -92,6 +92,7 @@ zplug load
 alias ls='ls --color=auto'
 alias vi=vim
 
+alias jman='LANG=ja_JP.UTF-8'
 alias update='/home/yoshi/Code/sh/flush.sh'
 alias tscreen='/home/yoshi/Code/sh/tscreen.sh'
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ END
