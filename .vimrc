@@ -95,6 +95,8 @@ set ignorecase
 "検索後をハイライト表示
 set hlsearch
 
+"increment search
+set incsearch
 ""PLUGIN SETTINGS++++++++++++++++++++++++
 
 "":call dein#check_update(v:true)
