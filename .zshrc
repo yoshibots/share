@@ -93,6 +93,7 @@ zplug load
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias vi=vim
+alias rm='rm -i'
 
 alias jman='LANG=ja_JP.UTF-8'
 alias update='/home/yoshi/Code/sh/flush.sh'
